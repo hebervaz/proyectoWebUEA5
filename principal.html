@@ -1,0 +1,109 @@
+    <!--________________________________________HOME_______________________________________-->
+
+<!--__________________INICIA HTML__________________-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atemporal</title>
+
+
+<!--__________________INICIA CSS STYLE__________________-->
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .image {
+            position: absolute;
+            object-fit: contain;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; 
+            }
+            to { opacity: 1; 
+            }
+        }
+    </style>
+
+<!--__________________TERMINA CSS STYLE__________________-->
+
+
+
+</head>
+
+
+<body>
+
+
+<!--__________________INICIA SCRIPT__________________-->
+
+    <script>
+        const images = [
+        "img/prueba1.jpeg",
+        "img/prueba2.jpeg",
+        "img/prueba3.jpeg",
+        "img/prueba1.jpeg",
+        "img/prueba2.jpeg",
+        "img/prueba3.jpeg",
+        "img/prueba1.jpeg",
+        "img/prueba2.jpeg",
+        "img/prueba3.jpeg",
+
+        ];
+        
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+        
+        function getRandomPosition() {
+            return {
+                top: `${Math.random() * 80}vh`,
+                left: `${Math.random() * 80}vw`
+            };
+        }
+        
+        function getRandomSize() {
+            const maxSize = Math.min(window.innerWidth, window.innerHeight) * 0.25; // Máximo 25% del tamaño de la pantalla
+            const size = Math.random() * (maxSize - 50) + 50; // Entre 50px y el máximo permitido
+            return { size: `${size}px` };
+        }
+        
+        function displayImages() {
+            const shuffledImages = shuffle([...images]);
+            shuffledImages.forEach((src, index) => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.className = "image";
+                const position = getRandomPosition();
+                const size = getRandomSize();
+                img.style.top = position.top;
+                img.style.left = position.left;
+                img.style.width = size.size;
+                img.style.height = "auto"; // Mantiene la proporción original
+                img.style.animationDelay = `${index * 0.5}s`;
+                document.body.appendChild(img);
+            });
+        }
+        
+        window.onload = displayImages;
+
+        document.addEventListener('click', function() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error(`Error intentando entrar en pantalla completa: ${err.message} (${err.name})`);
+                });
+            }
+        });
+    </script>
+
+        
+
+    </script>
+</body>
+</html>
