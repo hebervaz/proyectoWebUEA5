@@ -1,139 +1,101 @@
-<<!--________________________________________HOME_______________________________________-->
-
-<!--__________________INICIA HTML__________________-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Título de la Obra-->
     <title>Atemporal</title> 
 
-
-<!--__________________INICIA CSS STYLE__________________-->
-
     <style>
-
-        /*Estilo del body*/
         body {
             background-color: black;
             margin: 0;
             overflow: hidden;
             position: relative;
         }
-        @media screen and (max-widht: 1080px) {
-            .image{
-            width: 100%;
-        }
-    }
-        /*Estilo del body*/
+
         .image {
             position: absolute;
             object-fit: contain;
             opacity: 0;
             animation: fadeIn 1s forwards;
+            cursor: pointer;
         }
 
-        /*Efecto para aparecer las imágenes*/
-        @keyframes fadeIn { /* Fade in es un efecto en el que aparece progresivamente la imágen con ayuda de su opacidad*/
-            from { opacity: 0; /* Parte desde 0% de opacidad*/
-            }
-            to { opacity: 1; /* Llega hasta 100% de opacidad*/
-            }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-
     </style>
-
-<!--__________________TERMINA CSS STYLE__________________-->
-
-
-
-<!--__________________CONTINUA HTML__________________-->
-
 </head>
-
 
 <body>
 
-
-<!--__________________INICIA SCRIPT__________________-->
-
 <script>
-
-    //Carga de imágenes de notificaciones (reemplazar por las oficiales)
     const images = [
         "img/prueba1.jpeg",
         "img/prueba2.jpeg",
-        "img/prueba3.jpeg",
-        "img/prueba1.jpeg",
-        "img/prueba2.jpeg",
-        "img/prueba3.jpeg",
-        "img/prueba1.jpeg",
-        "img/prueba2.jpeg",
-        "img/prueba3.jpeg",
+        "img/prueba3.jpeg"
     ];
 
-    const audios = [
-    "audio/livechat-129007.mp3",
-    "audio/warning-notification-call-184996.mp3",
-    "audio/livechat-129007.mp3",
-    "audio/livechat-129007.mp3",
-    "audio/warning-notification-call-184996.mp3",
-    "audio/livechat-129007.mp3",
-    "audio/livechat-129007.mp3",
-    "audio/warning-notification-call-184996.mp3",
-    "audio/livechat-129007.mp3",
-    ]
-        
-    //Función de aleatoreidad
     function shuffle(array) {
         return array.sort(() => Math.random() - 0.5);
     }
         
-    //Genera una posición aleatoria de la pantalla
     function getRandomPosition() {
         return {
-            top: `${Math.random() * 80}vh`, //Altura de la pantalla en % (80 para dejar un margen arriba y abajo)
-            left: `${Math.random() * 80}vw` //Ancho de la pantalla en % (80 para dejar un margen a la izquierda y derecha)
+            top: `${Math.random() * 80}vh`,
+            left: `${Math.random() * 80}vw`
         };
     }
 
-    //Genera un tamaño aleatorio de las imágenes       
     function getRandomSize() {
-        const maxSize = Math.min(window.innerWidth, window.innerHeight) * 0.075; // Máximo 25% del tamaño de la pantalla
-        const size = Math.random() * (maxSize - 4) + 4; // Entre 50% y el máximo permitido
-        return { size: `${size}%` }; //Aquí se da la instrucción de que se redimencione en porcentaje de la pantalla o donde se proyecte
+        const maxSize = Math.min(window.innerWidth, window.innerHeight) * 0.2;
+        const size = Math.random() * (maxSize - 4) + 4;
+        return { size: `${size}%` };
     }
-        
 
     function displayImages() {
         const shuffledImages = shuffle([...images]);
-        const shuffledAudios = shuffle([...audios]);
 
         shuffledImages.forEach((src, index) => {
             setTimeout(() => {
                 const img = document.createElement("img");
                 img.src = src;
                 img.className = "image";
+
                 const position = getRandomPosition();
                 const size = getRandomSize();
                 img.style.top = position.top;
                 img.style.left = position.left;
                 img.style.width = size.size;
                 img.style.height = "auto";
-                document.body.appendChild(img);
 
-                const audio = new Audio(shuffledAudios[index]);
-                audio.play();
+                img.addEventListener("click", function() {
+                    abrirVentanaEmergente();
+                });
+
+                document.body.appendChild(img);
             }, index * 1500);
         });
     }
 
+    function abrirVentanaEmergente() {
+        // Abrir una nueva ventana con un HTML interno (popup.html)
+        const ventana = window.open("popup.html", "VentanaEmergente", "width=400,height=400");
+
+        if (!ventana) {
+            alert("La ventana emergente fue bloqueada. Por favor, permite pop-ups para este sitio.");
+            return;
+        }
+
+        // Redirigir la página principal después de 5 segundos
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 5000);
+    }
+
     window.onload = displayImages;
 </script>
-
-<!--__________________TERMINA JAVA SCRIPT__________________-->
-
 
 </body>
 </html>
