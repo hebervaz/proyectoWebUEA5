@@ -25,22 +25,50 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        /* Contenedor de la imagen emergente */
+        #popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #popup-container img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
 <body>
 
+<!-- Contenedor de la imagen emergente -->
+<div id="popup-container">
+    <img id="popup-img" src="" alt="Imagen emergente">
+</div>
+
 <script>
     const images = [
-        "img/prueba1.jpeg",
-        "img/prueba2.jpeg",
-        "img/prueba3.jpeg"
+        "img/notificaciones/calendario.jpg",
+        "img/notificaciones/mensaje.jpg",
+        "img/notificaciones/mercado.jpg"
     ];
 
-    function shuffle(array) {
-        return array.sort(() => Math.random() - 0.5);
-    }
-        
+    // Asociamos las imágenes con sus emergentes correspondientes
+    const popupImages = {
+        "img/notificaciones/calendario.jpg": "img/emergentes/calendario.png",
+        "img/notificaciones/mensaje.jpg": "img/emergentes/mensaje.png",
+        "img/notificaciones/mercado.jpg": "img/emergentes/mercado_libre.jpeg"
+    };
+
     function getRandomPosition() {
         return {
             top: `${Math.random() * 80}vh`,
@@ -55,9 +83,7 @@
     }
 
     function displayImages() {
-        const shuffledImages = shuffle([...images]);
-
-        shuffledImages.forEach((src, index) => {
+        images.forEach((src, index) => {
             setTimeout(() => {
                 const img = document.createElement("img");
                 img.src = src;
@@ -71,7 +97,7 @@
                 img.style.height = "auto";
 
                 img.addEventListener("click", function() {
-                    abrirVentanaEmergente();
+                    abrirImagen(src);  // Pasamos la imagen clickeada
                 });
 
                 document.body.appendChild(img);
@@ -79,19 +105,21 @@
         });
     }
 
-    function abrirVentanaEmergente() {
-        // Abrir una nueva ventana con un HTML interno (popup.html)
-        const ventana = window.open("popup.html", "VentanaEmergente", "width=400,height=400");
+    function abrirImagen(imageSrc) {
+        // Abrimos la imagen correspondiente al hacer clic
+        const popupImage = popupImages[imageSrc];
+        document.getElementById("popup-img").src = popupImage;
+        document.getElementById("popup-container").style.display = "flex";
 
-        if (!ventana) {
-            alert("La ventana emergente fue bloqueada. Por favor, permite pop-ups para este sitio.");
-            return;
-        }
-
-        // Redirigir la página principal después de 5 segundos
+        // Cierra la imagen y recarga la página después de 5 segundos
         setTimeout(() => {
-            window.location.href = "home.html";
+            cerrarImagen();
         }, 5000);
+    }
+
+    function cerrarImagen() {
+        document.getElementById("popup-container").style.display = "none";
+        location.reload(); // Recargar la página
     }
 
     window.onload = displayImages;
