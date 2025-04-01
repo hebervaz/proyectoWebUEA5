@@ -1,103 +1,17 @@
-<!--________________________________________INICIO________________________________________-->
-
-
-<!--__________________INICIA HTML__________________-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atemporal</title>
-    
-
-
-<!--__________________INICIA CSS STYLE__________________-->
-
-<style>
-
-
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #222;
-        color: white;
-    }
-    #clock {
-        font-size: 20px; /* Reducir tamaño del reloj */
-        font-weight: bold;
-        padding: 10px;
-        background: #333;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-    }
-    input, button {
-        font-size: 16px;
-        padding: 8px;
-        margin: 5px;
-    }
-
-</style>
-
-<!--__________________TERMINA CSS STYLE__________________-->
-
-
-
-<!--__________________CONTINUA HTML__________________-->
-
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
     <div id="clock">00:00:00</div>
     <input type="time" id="alarmTime">
     <button onclick="setAlarm()">Activar Alarma</button>
 
-
-<!--__________________INICIA JAVA SCRIPT__________________-->
-    
-<script>
-
-    function updateClock() {
-        const now = new Date();
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        const seconds = String(now.getSeconds()).padStart(2, '0');
-        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-    }
-
-    function setAlarm() {
-        const alarmInput = document.getElementById("alarmTime").value;
-        if (alarmInput) {
-            // Ocultar todo y poner pantalla en negro
-            document.body.style.backgroundColor = "black";
-            document.body.innerHTML = ""; 
-    
-            // Generar un tiempo de espera aleatorio entre 5 y 10 segundos
-            const delay = Math.random() * (3 - 1) + 1;
-    
-            setTimeout(() => {
-                window.location.href = "home.html"; 
-            }, delay * 1000); // Convertir a milisegundos
-        } else {
-            alert("Por favor, ingresa una hora válida.");
-        }
-    }
-    
-    setInterval(updateClock, 1000);
-    updateClock();
-
-</script>
-
-<!--__________________TERMINA JAVA SCRIPT__________________-->
-
-
+    <script src="index.js"></script>
 </body>
 </html>
 
-<!--__________________TERMINA HTML__________________-->
