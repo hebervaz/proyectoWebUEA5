@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: limegreen;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5rem;
+    text-shadow: 0 0 5px limegreen, 0 0 10px limegreen;
+    cursor: pointer;
+    margin: 0;
+    overflow: hidden;
+}
+.clock {
+    display: flex;
+    position: absolute;
+    top: 10px; /* Coloca el reloj en la parte superior */
+    z-index: -1; /* Asegura que el reloj esté detrás del mapa */
+    transition: all 0.5s ease;
+}
+.digit {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+#map {
+    width: 80%;  /* Mapa ocupa el 80% del ancho de la pantalla */
+    height: 60%; /* Mapa ocupa el 60% de la altura de la pantalla */
+    border: 2px solid limegreen;
+    z-index: 1; /* Mapa estará encima del reloj */
+    margin-top: 80px; /* Espacio entre el reloj y el mapa */
+}
