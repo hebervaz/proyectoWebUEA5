@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globo Terráqueo Interactivo</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Variables globales
+        let scene, camera, renderer, globe, raycaster, mouse;
+
+        // Inicialización de la escena
+        function init() {
+            // Crear la escena
+            scene = new THREE.Scene();
+
+            // Configurar la cámara
+            camera = new THREE.PerspectiveCamera(
+                75,
+                window.innerWidth / window.innerHeight,
+                0.1,
+                1000
+            );
+            camera.position.z = 3;
+
+            // Configurar el renderizador
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            // Añadir la esfera (globo terráqueo)
+            const geometry = new THREE.SphereGeometry(1, 64, 64);
+            const textureLoader = new THREE.TextureLoader();
+            const texture = textureLoader.load('assets/mapa.jpg');
+            const material = new THREE.MeshBasicMaterial({ map: texture });
+            globe = new THREE.Mesh(geometry, material);
+            scene.add(globe);
+
+            // Configurar el raycaster y el vector del mouse
+            raycaster = new THREE.Raycaster();
+            mouse = new THREE.Vector2();
+
+            // Cargar y añadir los datos GeoJSON
+            loadGeoJSON();
+
+            // Añadir el listener para la interacción con el mouse
+            window.addEventListener('click', onMouseClick, false);
+
+            // Manejar el redimensionamiento de la ventana
+            window.addEventListener('resize', onWindowResize, false);
+
+            // Iniciar la animación
+            animate();
+        }
+
+        // Cargar y proyectar los datos GeoJSON sobre la esfera
+        function loadGeoJSON() {
+            fetch('assets/mapa.json')
+                .then(response => response.json())
+                .then(data => {
+                    const countries = new THREE.Group();
+                    data.features.forEach(feature => {
+                        // Obtén el nombre del país usando la propiedad correcta
+                        const countryName = feature.properties.ADMIN || feature.properties.name || 'Desconocido';
+                        const { type, coordinates } = feature.geometry;
+                        const country = new THREE.Object3D();
+
+                        if (type === 'Polygon') {
+                            coordinates.forEach(polygon => {
+                                const shape = createShapeFromCoords(polygon);
+                                if (shape) {
+                                    const mesh = createMeshFromShape(shape, countryName);
+                                    country.add(mesh);
+                                }
+                            });
+                        } else if (type === 'MultiPolygon') {
+                            coordinates.forEach(multiPolygon => {
+                                multiPolygon.forEach(polygon => {
+                                    const shape = createShapeFromCoords(polygon);
+                                    if (shape) {
+                                        const mesh = createMeshFromShape(shape, countryName);
+                                        country.add(mesh);
+                                    }
+                                });
+                            });
+                        }
+                        countries.add(country);
+                    });
+                    globe.add(countries);
+                })
+                .catch(error => console.error('Error al cargar el GeoJSON:', error));
+        }
+
+        function createShapeFromCoords(polygon) {
+            const shape = new THREE.Shape();
+            polygon.forEach(([lng, lat], index) => {
+                const { x, y, z } = latLngToVector3(lat, lng);
+                if (index === 0) {
+                    shape.moveTo(x, y);
+                } else {
+                    shape.lineTo(x, y);
+                }
+            });
+            return shape;
+        }
+
+        function createMeshFromShape(shape, name) {
+            const geometry = new THREE.ShapeGeometry(shape);
+            const material = new THREE.MeshBasicMaterial({
+                color: 0x00ff00,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.5,
+            });
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.userData = { name };
+            return mesh;
+        }
+
+        // Convertir latitud y longitud a coordenadas 3D
+        function latLngToVector3(lat, lng, radius = 1) {
+            const phi = (90 - lat) * (Math.PI / 180);
+            const theta = (lng + 180) * (Math.PI / 180);
+            return {
+                x: -(radius * Math.sin(phi) * Math.cos(theta)),
+                y: radius * Math.cos(phi),
+                z: radius * Math.sin(phi) * Math.sin(theta),
+            };
+        }
+
+        // Manejar el clic del mouse
+        function onMouseClick(event) {
+            // Calcular la posición del mouse en coordenadas normalizadas
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            // Actualizar el raycaster con la cámara y la posición del mouse
+            raycaster.setFromCamera(mouse, camera);
+
+            // Calcular intersecciones
+            const intersects = raycaster.intersectObjects(globe.children, true);
+
+            if (intersects.length > 0) {
+                const country = intersects[0].object;
+                alert(`Este país es: ${country.userData.name}`);
+            }
+        }
+
+        // Manejar el redimensionamiento de la ventana
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        // Animación de la escena
+        function animate() {
+            requestAnimationFrame(animate);
+            globe.rotation.y += 0.005; // Rotación continua del globo
+            renderer.render(scene, camera);
+        }
+
+        // Iniciar la aplicación
+        init();
+    </script>
+</body>
+</html>

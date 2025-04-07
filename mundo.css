@@ -1,0 +1,16 @@
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    /* Usamos flexbox para centrar el canvas */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000; /* Fondo opcional */
+    }
+    canvas {
+        border:1px #ccc;
+    }
+    

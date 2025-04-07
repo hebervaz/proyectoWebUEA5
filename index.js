@@ -44,5 +44,5 @@
         updateClock();
 
         function redirectToPage() {
-            window.location.href = "home.html";  
+            window.location.href = "mundo.html";  
         }
