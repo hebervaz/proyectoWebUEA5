@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: black;
-    color: limegreen;
+    color: #00FF00;
     font-family: 'Courier New', Courier, monospace;
     font-size: 5rem;
     text-shadow: 0 0 5px limegreen, 0 0 10px limegreen;
@@ -26,6 +26,6 @@ body {
     top: 0;
     left: 0;
     opacity: 0.7;
-    color: red;
+    color: #FF0000;
     transform: translateX(-2px);
 }
