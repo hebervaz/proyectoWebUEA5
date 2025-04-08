@@ -10,10 +10,10 @@
       align-items: center;
       background-color: #000; /* Fondo opcional */
     }
-    canvas {
+  canvas {
         border:1px #ccc;
-    }
-    .popup {
+  }
+  .popup {
   position: fixed;
   top: 20px;
   left: 50%;

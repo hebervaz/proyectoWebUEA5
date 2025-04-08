@@ -44,6 +44,6 @@
         updateClock();
 
         function redirectToPage() {
-            window.location.href = "reinicio.html";  
+            window.location.href = "cargando.html";  
         }
 
