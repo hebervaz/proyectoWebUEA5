@@ -1,6 +1,8 @@
 # Time_Not_Found_
 net.Art | Entorno 3D interactivo 
-Proyecto del eje integrador de la UEA V.  Licenciatura en AyCD. UAM Lerma, México.
+Proyecto del eje integrador de la UEA V.
+
+Licenciatura en AyCD. UAM Lerma, México.
 ## Autores:  
 Celso Jiménez, Fernanda Tejeda, Heber Vazquez, Andrea Villegas
 ## Art Statement:  
