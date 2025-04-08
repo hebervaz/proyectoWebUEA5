@@ -7,9 +7,9 @@ canvas.height = window.innerHeight * 0.5;
 
 // Configura la proyección ortográfica
 const projection = d3.geoOrthographic()
-    .scale(Math.min(canvas.width, canvas.height) / 2) // Ajusta la escala según el tamaño del lienzo
-    .translate([canvas.width / 2, canvas.height / 2]) // Centrado del globo
-    .rotate([0, 0]); // Rotación inicial
+    .scale(Math.min(canvas.width, canvas.height) / 2)
+    .translate([canvas.width / 2, canvas.height / 2])
+    .rotate([0, 0]);
 
 const geoGenerator = d3.geoPath()
     .projection(projection)
@@ -18,19 +18,19 @@ const geoGenerator = d3.geoPath()
 let geojson;
 let isDragging = false;
 let lastX, lastY;
-let esArrastre = false; // Variable para controlar si hubo arrastre
-const umbralArrastre = 5; // Umbral en píxeles para considerar un movimiento como arrastre
+let esArrastre = false;
+const umbralArrastre = 5;
 
-// Variables para la rotación automática
+// Rotación automática
 let autoRotate = true;
-const rotationSpeed = 0.02; // Velocidad de rotación automática
-let lastTime = Date.now(); // Marca de tiempo inicial
+const rotationSpeed = 0.02;
+let lastTime = Date.now();
 
-// Carga los datos GeoJSON
+// Cargar datos GeoJSON
 d3.json('assets/mapa.json').then(data => {
     geojson = data;
     iniciarAnimacion();
-    d3.timer(actualizarRotacion); // Inicia el temporizador de rotación
+    d3.timer(actualizarRotacion);
 }).catch(error => {
     console.error('Error al cargar los datos:', error);
 });
@@ -38,7 +38,7 @@ d3.json('assets/mapa.json').then(data => {
 function actualizarGlobo() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Dibuja el globo (círculo)
+    // Dibuja el globo
     context.beginPath();
     context.arc(canvas.width / 2, canvas.height / 2, projection.scale(), 0, 2 * Math.PI);
     context.fillStyle = '#001f3f';
@@ -66,11 +66,11 @@ function iniciarAnimacion() {
     d3.timer(actualizarGlobo);
 }
 
-// Manejadores de eventos para el arrastre
+// Eventos de arrastre
 canvas.addEventListener('mousedown', function(event) {
     isDragging = true;
-    esArrastre = false; // Reinicia la variable al iniciar el clic
-    autoRotate = false; // Detiene la rotación automática
+    esArrastre = false;
+    autoRotate = false;
     lastX = event.clientX;
     lastY = event.clientY;
 });
@@ -80,14 +80,13 @@ canvas.addEventListener('mousemove', function(event) {
         const dx = event.clientX - lastX;
         const dy = event.clientY - lastY;
 
-        // Si el movimiento supera el umbral, se considera un arrastre
         if (Math.sqrt(dx * dx + dy * dy) > umbralArrastre) {
             esArrastre = true;
         }
 
         const rotation = projection.rotate();
         const scale = projection.scale();
-        const sensitivity = 75 / scale; // Sensibilidad del arrastre
+        const sensitivity = 75 / scale;
 
         const newRotation = [
             rotation[0] + dx * sensitivity,
@@ -103,17 +102,17 @@ canvas.addEventListener('mousemove', function(event) {
 
 canvas.addEventListener('mouseup', function() {
     isDragging = false;
-    autoRotate = true; // Reactiva la rotación automática
+    autoRotate = true;
 });
 
 canvas.addEventListener('mouseleave', function() {
     isDragging = false;
-    autoRotate = true; // Reactiva la rotación automática
+    autoRotate = true;
 });
 
-// Manejador de clics para detectar el país seleccionado
+// Click para mostrar popup y abrir enlace
 canvas.addEventListener('click', function(event) {
-    if (!esArrastre) { // Solo ejecuta si no hubo arrastre
+    if (!esArrastre) {
         const [x, y] = d3.pointer(event);
         const invertido = projection.invert([x, y]);
 
@@ -123,15 +122,19 @@ canvas.addEventListener('click', function(event) {
 
             if (pais) {
                 const nombrePais = pais.properties.ADMIN || pais.properties.name || 'No identificado';
-                alert(`Este país es: ${nombrePais}`);
-            } else {
-                alert('No se ha seleccionado ningún país.');
+                const urlNoticias = pais.properties.news_url;
+
+                mostrarPopup(`Abriendo noticias de ${nombrePais}...`);
+
+                if (urlNoticias) {
+                    window.open(urlNoticias, '_blank');
+                }
             }
         }
     }
 });
 
-// Función para actualizar la rotación automática
+// Rotación automática
 function actualizarRotacion() {
     if (autoRotate) {
         const now = Date.now();
@@ -142,3 +145,58 @@ function actualizarRotacion() {
         actualizarGlobo();
     }
 }
+
+// Función para mostrar el popup flotante
+function mostrarPopup(texto) {
+    const popup = document.getElementById('popup');
+    popup.textContent = texto;
+    popup.classList.add('show');
+
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, 2500);
+}
+
+const videos = [
+    'assets/video/prueba3.mp4',
+    'assets/video/prueba2.mp4',
+    'assets/video/prueba1.mp4',
+  ];
+  
+  // Mezclar aleatoriamente el orden
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  shuffleArray(videos);
+  
+  const videoPlayer = document.getElementById('background-video');
+  let currentIndex = 0;
+  
+  // Asegura que el video esté silenciado (requerido por navegadores)
+  videoPlayer.muted = true;
+  
+  function playNextVideo() {
+    videoPlayer.style.opacity = 0;
+  
+    setTimeout(() => {
+      videoPlayer.src = videos[currentIndex];
+      videoPlayer.load();
+      videoPlayer.play().catch(err => {
+        console.warn("Reproducción bloqueada por el navegador:", err);
+      });
+  
+      videoPlayer.onended = () => {
+        currentIndex = (currentIndex + 1) % videos.length;
+        playNextVideo(); // Reproduce el siguiente video
+      };
+  
+      videoPlayer.style.opacity = 1;
+    }, 500); // transiciones suaves
+  }
+  
+  // Inicia la secuencia de reproducción
+  playNextVideo();
+  

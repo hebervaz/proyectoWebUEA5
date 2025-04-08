@@ -46,3 +46,4 @@
         function redirectToPage() {
             window.location.href = "mundo.html";  
         }
+
