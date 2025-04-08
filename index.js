@@ -44,5 +44,5 @@
         updateClock();
 
         function redirectToPage() {
-            window.location.href = "mundo.html";  
+            window.location.href = "reinicio.html";  
         }
