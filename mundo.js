@@ -137,9 +137,11 @@ function mostrarPopup(texto) {
 
 // Fondo de video aleatorio
 const videos = [
-  'assets/video/prueba3.mp4',
-  'assets/video/prueba2.mp4',
-  'assets/video/prueba1.mp4',
+  'assets/video/1.mp4',
+  'assets/video/2.mp4',
+  'assets/video/3.mp4',
+  'assets/video/4.mp4',
+  'assets/video/5.mp4',
 ];
 
 function shuffleArray(arr) {

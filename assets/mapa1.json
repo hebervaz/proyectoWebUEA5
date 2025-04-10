@@ -173,7 +173,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "USA.geojson",
-        "news_url": "https://news.example.com/unknown"
+        "news_url": "https://blog.cloudflare.com/es-es/secure-time/"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -13753,7 +13753,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MEX.geojson",
-        "news_url": "https://news.example.com/unknown"
+        "news_url": "https://www.xataka.com.mx/ordenadores/problema-2038-colapso-inminente-computadoras-limite-tiempo-dilema-que-amenaza-estabilidad-digital"
       },
       "geometry": {
         "type": "Polygon",
