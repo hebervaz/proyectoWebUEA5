@@ -7,25 +7,25 @@ Celso Jiménez, Fernanda Tejeda, Heber Vazquez, Andrea Villegas
 
 ## Créditos de la obra:  
 
-## Investigación:  
+### Investigación:  
 -CelsoJMS58.  
 -María Tejeda.  
 -Heber Vazquez.  
 -Andrea.  
   
-## Conceptualización:  
+### Conceptualización:  
 -María Tejeda.  
 -Heber Vazquez.  
 -Andrea Villegas.  
   
-## Diseño de código:  
+### Diseño de código:  
 -CelsoJMS58.
   
-## Producción Multimedia:  
+### Producción Multimedia:  
 -Heber Vazquez.  
 -Andrea Villegas.  
   
-## Diseño Web:  
+### Diseño Web:  
 -CelsoJMS58.  
 -María Tejeda.  
 -Heber Vazquez.  
