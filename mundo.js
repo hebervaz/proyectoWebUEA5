@@ -17,7 +17,6 @@ let autoRotate = true;
 const rotationSpeed = 0.015;
 let lastTime = Date.now();
 
-// Cargar GeoJSON
 d3.json('assets/mapa1.json').then(data => {
   geojson = data;
   iniciarAnimacion();
@@ -26,10 +25,8 @@ d3.json('assets/mapa1.json').then(data => {
   console.error('Error al cargar los datos:', error);
 });
 
-// Dibuja el globo
 function actualizarGlobo() {
   context.clearRect(0, 0, canvas.width, canvas.height);
-
   context.beginPath();
   context.arc(canvas.width / 2, canvas.height / 2, projection.scale(), 0, 2 * Math.PI);
   context.fillStyle = '#001f3f';
@@ -55,7 +52,6 @@ function iniciarAnimacion() {
   d3.timer(actualizarGlobo);
 }
 
-// Arrastrar globo
 canvas.addEventListener('mousedown', e => {
   isDragging = true;
   esArrastre = false;
@@ -91,7 +87,6 @@ canvas.addEventListener('mouseleave', () => {
   autoRotate = true;
 });
 
-// Rotación automática
 function actualizarRotacion() {
   if (autoRotate) {
     const now = Date.now();
@@ -103,7 +98,7 @@ function actualizarRotacion() {
   }
 }
 
-// Mostrar popup + abrir noticias
+// Clic para abrir noticias con popup aleatorio
 canvas.addEventListener('click', event => {
   if (!esArrastre) {
     const [x, y] = d3.pointer(event);
@@ -117,8 +112,18 @@ canvas.addEventListener('click', event => {
         const urlNoticias = pais.properties.news_url;
 
         mostrarPopup(`Cargando noticias de ${nombrePais}...`);
+
         if (urlNoticias) {
-          window.open(urlNoticias, 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes');
+          const anchoPopup = 500;
+          const altoPopup = 400;
+          const left = Math.floor(Math.random() * (window.screen.width - anchoPopup));
+          const top = Math.floor(Math.random() * (window.screen.height - altoPopup));
+
+          window.open(
+            urlNoticias,
+            'popup',
+            `width=${anchoPopup},height=${altoPopup},left=${left},top=${top},scrollbars=yes,resizable=yes`
+          );
         }
       } else {
         mostrarPopup('No se detectó un país.');
@@ -127,7 +132,6 @@ canvas.addEventListener('click', event => {
   }
 });
 
-// Función para popup flotante
 function mostrarPopup(texto) {
   const popup = document.getElementById('popup');
   popup.textContent = texto;
@@ -135,7 +139,7 @@ function mostrarPopup(texto) {
   setTimeout(() => popup.classList.remove('show'), 2500);
 }
 
-// Fondo de video aleatorio
+// Fondo con videos aleatorios
 const videos = [
   'assets/video/1.mp4',
   'assets/video/2.mp4',
