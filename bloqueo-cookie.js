@@ -44,7 +44,6 @@ function getCookie(nombre) {
   const checkInterval = setInterval(() => {
     if (!getCookie(cookieAcceso)) {
       clearInterval(checkInterval);
-      alert("⛔ Tu tiempo expiró. No podrás volver por 30 minutos.");
 
       // Establecer bloqueo de 30 minutos
       setCookie(cookieBloqueado, "true", 30);
