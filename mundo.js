@@ -141,11 +141,7 @@ function mostrarPopup(texto) {
 
 // Fondo con videos aleatorios
 const videos = [
-  'assets/video/1.mp4',
-  'assets/video/2.mp4',
-  'assets/video/3.mp4',
-  'assets/video/4.mp4',
-  'assets/video/5.mp4',
+  'assets/video/1.mp4'
 ];
 
 function shuffleArray(arr) {
@@ -178,3 +174,4 @@ function playNextVideo() {
 }
 
 playNextVideo();
+

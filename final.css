@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    color: #00FF00;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2em;
+    margin: 0;
+    animation: flicker 3s infinite;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    max-width: 800px;
+    line-height: 1.6;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1em;
+    background: #00FF00;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  
+  @keyframes flicker {
+    0%, 100% { background-color: #000000; }
+    50% { background-color: #020202; }
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  

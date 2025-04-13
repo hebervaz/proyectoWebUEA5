@@ -8,7 +8,7 @@ Celso Jiménez, Fernanda Tejeda, Heber Vazquez, Andrea Villegas
 ## Créditos de la obra:  
 
 ### Investigación:  
--CelsoJMS58.  
+-Chaneke38 (Celso Jiménez).  
 -María Tejeda.  
 -Heber Vazquez.  
 -Andrea.  
@@ -19,14 +19,14 @@ Celso Jiménez, Fernanda Tejeda, Heber Vazquez, Andrea Villegas
 -Andrea Villegas.  
   
 ### Diseño de código:  
--CelsoJMS58.
+-Chaneke38 (Celso Jiménez).
   
 ### Producción Multimedia:  
 -Heber Vazquez.  
 -Andrea Villegas.  
   
 ### Diseño Web:  
--CelsoJMS58.  
+-Chaneke38 (Celso Jiménez).  
 -María Tejeda.  
 -Heber Vazquez.  
 -Andrea Villegas.  
