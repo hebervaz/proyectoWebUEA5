@@ -17,7 +17,9 @@ let autoRotate = true;
 const rotationSpeed = 0.015;
 let lastTime = Date.now();
 
-d3.json('assets/mapa1.json').then(data => {
+const imagenesCargadas = new Map();
+
+d3.json('assets/mapa3.json').then(data => {
   geojson = data;
   iniciarAnimacion();
   d3.timer(actualizarRotacion);
@@ -25,8 +27,17 @@ d3.json('assets/mapa1.json').then(data => {
   console.error('Error al cargar los datos:', error);
 });
 
+function isVisible([lon, lat]) {
+  const rotate = projection.rotate();
+  const lambda = lon + rotate[0];
+  const phi = lat;
+  const rad = Math.PI / 180;
+  return Math.cos(phi * rad) * Math.cos(lambda * rad) > 0;
+}
+
 function actualizarGlobo() {
   context.clearRect(0, 0, canvas.width, canvas.height);
+
   context.beginPath();
   context.arc(canvas.width / 2, canvas.height / 2, projection.scale(), 0, 2 * Math.PI);
   context.fillStyle = '#001f3f';
@@ -46,6 +57,31 @@ function actualizarGlobo() {
   context.strokeStyle = '#dddddd';
   context.lineWidth = 0.3;
   context.stroke();
+
+  geojson.features.forEach(feature => {
+    const props = feature.properties;
+    const coords = [props.label_x, props.label_y];
+
+    if (props.icon && coords[0] != null && coords[1] != null && isVisible(coords)) {
+      const [x, y] = projection(coords);
+      if (!x || !y) return;
+
+      const rutaIcono = props.icon;
+      const tamaño = 20;
+
+      if (imagenesCargadas.has(rutaIcono)) {
+        const img = imagenesCargadas.get(rutaIcono);
+        context.drawImage(img, x - tamaño / 2, y - tamaño / 2, tamaño, tamaño);
+      } else {
+        const img = new Image();
+        img.src = rutaIcono;
+        img.onload = () => {
+          imagenesCargadas.set(rutaIcono, img);
+          context.drawImage(img, x - tamaño / 2, y - tamaño / 2, tamaño, tamaño);
+        };
+      }
+    }
+  });
 }
 
 function iniciarAnimacion() {
@@ -98,7 +134,6 @@ function actualizarRotacion() {
   }
 }
 
-// Clic para abrir noticias con popup aleatorio
 canvas.addEventListener('click', event => {
   if (!esArrastre) {
     const [x, y] = d3.pointer(event);
@@ -108,55 +143,86 @@ canvas.addEventListener('click', event => {
       const [lng, lat] = invertido;
       const pais = geojson.features.find(f => d3.geoContains(f, [lng, lat]));
       if (pais) {
-        const nombrePais = pais.properties.ADMIN || 'País';
+        const nombrePais = pais.properties.name || 'País';
         const urlNoticias = pais.properties.news_url;
 
-        mostrarPopup(`Cargando noticias de ${nombrePais}...`);
-
         if (urlNoticias) {
-          const anchoPopup = 500;
-          const altoPopup = 400;
-          const left = Math.floor(Math.random() * (window.screen.width - anchoPopup));
-          const top = Math.floor(Math.random() * (window.screen.height - altoPopup));
+          const esImagen = urlNoticias.match(/\.(jpg|jpeg|png|webp|gif)$/i);
+          if (esImagen) {
+            mostrarImagenLocal(urlNoticias, nombrePais);
+          } else {
+            const anchoPopup = 500;
+            const altoPopup = 400;
+            const left = Math.floor(Math.random() * (window.screen.width - anchoPopup));
+            const top = Math.floor(Math.random() * (window.screen.height - altoPopup));
 
-          window.open(
-            urlNoticias,
-            'popup',
-            `width=${anchoPopup},height=${altoPopup},left=${left},top=${top},scrollbars=yes,resizable=yes`
-          );
+            window.open(
+              urlNoticias,
+              'popup',
+              `width=${anchoPopup},height=${altoPopup},left=${left},top=${top},scrollbars=yes,resizable=yes`
+            );
+          }
         }
-      } else {
-        mostrarPopup('No se detectó un país.');
       }
     }
   }
 });
 
-function mostrarPopup(texto) {
+function mostrarImagenLocal(ruta, nombrePais) {
   const popup = document.getElementById('popup');
-  popup.textContent = texto;
+
+  const maxAncho = 300;
+  const maxAlto = 300;
+
+  const left = Math.floor(Math.random() * (window.innerWidth - maxAncho - 20));
+  const top = Math.floor(Math.random() * (window.innerHeight - maxAlto - 20));
+
+  popup.style.position = 'absolute';
+  popup.style.left = `${left}px`;
+  popup.style.top = `${top}px`;
+
+  popup.innerHTML = `
+    <div>
+      <strong>${nombrePais}</strong><br>
+      <img src="${ruta}" style="max-width: ${maxAncho}px; max-height: ${maxAlto}px; margin-top: 5px; border-radius: 10px;" />
+    </div>
+  `;
+
   popup.classList.add('show');
-  setTimeout(() => popup.classList.remove('show'), 2500);
+
+  // 🔁 Auto-cierre después de 7 segundos
+  setTimeout(() => {
+    cerrarPopup();
+  }, 7000);
 }
 
-// Fondo con videos aleatorios
-const videos = [
-  'assets/video/1.mp4'
-];
 
+function cerrarPopup() {
+  const popup = document.getElementById('popup');
+  popup.classList.remove('show');
+}
+
+function mostrarPopup(texto) {
+  const popup = document.getElementById('popup');
+  popup.innerHTML = `<p>${texto}</p>`;
+  popup.style.left = '20px';
+  popup.style.top = '20px';
+  popup.classList.add('show');
+  setTimeout(() => popup.classList.remove('show'), 3000);
+}
+
+// Fondo con video
+const videos = ['assets/video/1.mp4'];
 function shuffleArray(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
-
 shuffleArray(videos);
 const videoPlayer = document.getElementById('background-video');
 let currentIndex = 0;
-
 videoPlayer.muted = true;
-
 function playNextVideo() {
   videoPlayer.style.opacity = 0;
   setTimeout(() => {
@@ -172,6 +238,4 @@ function playNextVideo() {
     videoPlayer.style.opacity = 1;
   }, 500);
 }
-
 playNextVideo();
-
