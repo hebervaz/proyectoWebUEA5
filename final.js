@@ -7,12 +7,6 @@ const ahora = new Date().getTime();
 const minutos30 = 30 * 60 * 1000;
 
 if (ultimaVisita && ahora - ultimaVisita < minutos30) {
-  // Si no han pasado 30 minutos, redirigir directamente
-  contadorTexto.textContent = "La obra estará disponible nuevamente en breve.";
-  setTimeout(() => {
-    window.location.href = "index.html";
-  }, 3000);
-} else {
   // Si sí han pasado 30 minutos (o nunca la ha visto), dejar ver con cuenta regresiva
   let segundos = 5;
   tiempoElemento.textContent = segundos;

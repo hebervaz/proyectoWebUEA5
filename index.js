@@ -1,49 +1,61 @@
-        function updateClock() {
-            let hours = Math.floor(Math.random() * 24);
-            let minutes = Math.floor(Math.random() * 60);
-            let seconds = Math.floor(Math.random() * 60);
+let audioIniciado = false;
+const audio = document.getElementById("alarma-audio");
 
-            let timeString = 
-                String(hours).padStart(2, '0') + ":" + 
-                String(minutes).padStart(2, '0') + ":" + 
-                String(seconds).padStart(2, '0');
+function intentarIniciarAudio() {
+    if (!audioIniciado && audio) {
+        audio.volume = 0.1;
+        audio.play().then(() => {
+            audioIniciado = true;
+            console.log("🔊 Audio iniciado con éxito");
+        }).catch(err => {
+            console.warn("❌ No se pudo iniciar el audio automáticamente:", err);
+        });
+    }
+}
 
-            const clockDiv = document.getElementById('clock');
-            clockDiv.innerHTML = '';
+function updateClock() {
+    intentarIniciarAudio(); // Intenta iniciar el audio en cada actualización
 
-            for (let i = 0; i < timeString.length; i++) {
-                let char = timeString[i];
-                let digitDiv = document.createElement('div');
-                digitDiv.classList.add('digit');
-                digitDiv.textContent = char;
+    let hours = Math.floor(Math.random() * 24);
+    let minutes = Math.floor(Math.random() * 60);
+    let seconds = Math.floor(Math.random() * 60);
 
-                let glitchDiv = document.createElement('div');
-                glitchDiv.classList.add('digit', 'glitch');
-                glitchDiv.textContent = Math.floor(Math.random() * 10);
+    let timeString = 
+        String(hours).padStart(2, '0') + ":" + 
+        String(minutes).padStart(2, '0') + ":" + 
+        String(seconds).padStart(2, '0');
 
-                digitDiv.appendChild(glitchDiv);
-                clockDiv.appendChild(digitDiv);
+    const clockDiv = document.getElementById('clock');
+    clockDiv.innerHTML = '';
 
-                // Cambia los números aleatoriamente
-                setInterval(() => {
-                    if (Math.random() > 0.5) {
-                        digitDiv.textContent = Math.floor(Math.random() * 10);
-                    } else {
-                        digitDiv.textContent = char;
-                    }
-                }, Math.random() * 500 + 100);
+    for (let i = 0; i < timeString.length; i++) {
+        let char = timeString[i];
+        let digitDiv = document.createElement('div');
+        digitDiv.classList.add('digit');
+        digitDiv.textContent = char;
 
-                setTimeout(() => {
-                    glitchDiv.textContent = char;
-                    glitchDiv.style.opacity = 0;
-                }, Math.random() * 300);
-            }
-        }
+        let glitchDiv = document.createElement('div');
+        glitchDiv.classList.add('digit', 'glitch');
+        glitchDiv.textContent = Math.floor(Math.random() * 10);
 
-        setInterval(updateClock, 500);
-        updateClock();
+        digitDiv.appendChild(glitchDiv);
+        clockDiv.appendChild(digitDiv);
 
-        function redirectToPage() {
-            window.location.href = "cargando.html";  
-        }
+        // Cambia los números aleatoriamente
+        setInterval(() => {
+            digitDiv.textContent = Math.random() > 0.5 ? Math.floor(Math.random() * 10) : char;
+        }, Math.random() * 500 + 100);
 
+        setTimeout(() => {
+            glitchDiv.textContent = char;
+            glitchDiv.style.opacity = 0;
+        }, Math.random() * 300);
+    }
+}
+
+setInterval(updateClock, 500);
+updateClock();
+
+function redirectToPage() {
+    window.location.href = "cargando.html";  
+}

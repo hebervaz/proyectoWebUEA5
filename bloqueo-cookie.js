@@ -1,16 +1,11 @@
-// Este script controla el acceso a una página web mediante cookies.
-// Si el usuario no tiene acceso, se le redirige a otra página.
-// Si tiene acceso, se le permite permanecer en la página por un tiempo limitado.
-// Si el tiempo expira, se le bloquea el acceso por 30 minutos.
-// Se utilizan cookies para gestionar el acceso y el bloqueo.
-// Se establece una cookie de acceso con un tiempo aleatorio entre 4 y 7 minutos.
-// Si el usuario intenta acceder después de que la cookie de acceso haya expirado, se le redirige a la página de inicio y se establece una cookie de bloqueo por 30 minutos
+// Utilidad para crear cookies con duración en minutos
 function setCookie(nombre, valor, minutos) {
   const fecha = new Date();
   fecha.setTime(fecha.getTime() + (minutos * 60 * 1000));
   document.cookie = `${nombre}=${valor}; expires=${fecha.toUTCString()}; path=/`;
 }
 
+// Utilidad para obtener una cookie por nombre
 function getCookie(nombre) {
   const cookies = document.cookie.split(';');
   for (let c of cookies) {
@@ -22,32 +17,62 @@ function getCookie(nombre) {
   return null;
 }
 
+// Lógica principal de acceso y control de tiempo
 (function controlarAcceso() {
   const cookieAcceso = "acceso_mundo";
   const cookieBloqueado = "bloqueado_mundo";
+  const audio = document.getElementById("alarma-audio");
 
-  // Si está bloqueado, redirigir inmediatamente
+  // Si está bloqueado => redirigir a final.html
   if (getCookie(cookieBloqueado)) {
-    console.warn("⛔ Acceso bloqueado");
     window.location.href = "final.html";
     return;
   }
 
-  // Si tiene acceso válido, continuar
+  // Establece tiempo de acceso aleatorio entre 4 y 7 minutos
+  const duracionMinutos = Math.floor(Math.random() * (7 - 4 + 1)) + 4;
+
+  let tiempoFinal;
+
   if (!getCookie(cookieAcceso)) {
-    const minutos = Math.floor(Math.random() * (7 - 4 + 1)) + 4;
-    setCookie(cookieAcceso, "activo", minutos);
-    console.log(`✅ Acceso concedido por ${minutos} minutos`);
-  } 
+    tiempoFinal = Date.now() + duracionMinutos * 60 * 1000;
+    setCookie(cookieAcceso, tiempoFinal, duracionMinutos);
+  } else {
+    tiempoFinal = parseInt(getCookie(cookieAcceso), 10);
+  }
 
-  // Revisar si se expiró la cookie de acceso
-  const checkInterval = setInterval(() => {
-    if (!getCookie(cookieAcceso)) {
-      clearInterval(checkInterval);
+  const tiempoInicio = tiempoFinal - duracionMinutos * 60 * 1000;
 
-      // Establecer bloqueo de 30 minutos
-      setCookie(cookieBloqueado, "true", 30);
+  // Esperar interacción del usuario para activar audio
+  function activarAudio() {
+    if (audio && audio.paused) {
+      audio.volume = 0.1;
+      audio.loop = true;
+      audio.play().then(() => {
+        console.log("🔊 Audio activado por el usuario.");
+      }).catch(err => {
+        console.warn("⚠️ Error al reproducir audio:", err);
+      });
+    }
+    document.removeEventListener("click", activarAudio);
+  }
+  document.addEventListener("click", activarAudio);
+
+  // Monitoreo de expiración + volumen creciente
+  const intervalo = setInterval(() => {
+    const ahora = Date.now();
+    const restante = tiempoFinal - ahora;
+
+    if (restante <= 0) {
+      clearInterval(intervalo);
+      setCookie(cookieBloqueado, "true", 30); // Cambia 30 si quieres bloquear por más o menos tiempo
       window.location.href = "final.html";
+      return;
+    }
+
+    const progreso = (ahora - tiempoInicio) / (tiempoFinal - tiempoInicio);
+    if (audio) {
+      audio.volume = Math.min(0.1 + progreso * 0.9, 1);
     }
   }, 1000);
 })();

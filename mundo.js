@@ -190,7 +190,7 @@ function mostrarImagenLocal(ruta, nombrePais) {
 
   popup.classList.add('show');
 
-  // 🔁 Auto-cierre después de 7 segundos
+  // 🔁 Auto-cierre después de 7 minutos
   setTimeout(() => {
     cerrarPopup();
   }, 7000);
@@ -212,7 +212,7 @@ function mostrarPopup(texto) {
 }
 
 // Fondo con video
-const videos = ['assets/video/1.mp4'];
+const videos = ['assets/video/1.mp4', 'assets/video/1.mp4'];
 function shuffleArray(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -239,3 +239,100 @@ function playNextVideo() {
   }, 500);
 }
 playNextVideo();
+canvas.addEventListener('mousemove', function (event) {
+  if (!isDragging) {
+    const [x, y] = d3.pointer(event);
+    const invertido = projection.invert([x, y]);
+
+    if (invertido) {
+      const [lng, lat] = invertido;
+      const pais = geojson.features.find(f => d3.geoContains(f, [lng, lat]));
+
+      // Cambia el cursor si hay enlace
+      if (pais && pais.properties.news_url) {
+        canvas.style.cursor = 'pointer';
+      } else {
+        canvas.style.cursor = 'default';
+      }
+    } else {
+      canvas.style.cursor = 'default';
+    }
+  }
+});
+console.log("Mundo.js cargado correctamente.");
+
+// Utilidad para crear cookies con duración en minutos
+function setCookie(nombre, valor, minutos) {
+  const fecha = new Date();
+  fecha.setTime(fecha.getTime() + (minutos * 60 * 1000));
+  document.cookie = `${nombre}=${valor}; expires=${fecha.toUTCString()}; path=/`;
+}
+
+// Utilidad para obtener una cookie por nombre
+function getCookie(nombre) {
+  const cookies = document.cookie.split(';');
+  for (let c of cookies) {
+    c = c.trim();
+    if (c.indexOf(nombre + "=") === 0) {
+      return c.substring(nombre.length + 1);
+    }
+  }
+  return null;
+}
+
+// Lógica principal de acceso sin bloqueo posterior
+(function controlarAcceso() {
+  const cookieAcceso = "acceso_mundo";
+  const audio = document.getElementById("alarma-audio");
+
+  // Establece tiempo de acceso aleatorio entre 4 y 7 minutos
+  const duracionMinutos = Math.floor(Math.random() * (7 - 4 + 1)) + 4;
+
+  let tiempoFinal;
+
+  if (!getCookie(cookieAcceso)) {
+    tiempoFinal = Date.now() + duracionMinutos * 60 * 1000;
+    setCookie(cookieAcceso, tiempoFinal, duracionMinutos);
+  } else {
+    tiempoFinal = parseInt(getCookie(cookieAcceso), 10);
+  }
+
+  const tiempoInicio = tiempoFinal - duracionMinutos * 60 * 1000;
+
+  // Activar audio tras interacción del usuario
+  ["click", "mousemove", "keydown"].forEach(evento => {
+    document.addEventListener(evento, activarAudio);
+  });
+
+  function activarAudio() {
+    if (audio && audio.paused) {
+      audio.volume = 0.1;
+      audio.loop = true;
+      audio.play().catch(err => {
+        console.warn("⚠️ El navegador bloqueó el audio:", err);
+      });
+    }
+
+    // Solo una vez
+    ["click", "mousemove", "keydown"].forEach(evento => {
+      document.removeEventListener(evento, activarAudio);
+    });
+  }
+
+  // Revisión de expiración + volumen creciente
+  const intervalo = setInterval(() => {
+    const ahora = Date.now();
+    const restante = tiempoFinal - ahora;
+
+    if (restante <= 0) {
+      clearInterval(intervalo);
+      window.location.href = "final.html"; // Redirige sin bloquear
+      return;
+    }
+
+    const progreso = (ahora - tiempoInicio) / (tiempoFinal - tiempoInicio);
+    if (audio) {
+      audio.volume = Math.min(0.1 + progreso * 0.9, 1);
+    }
+  }, 1000);
+})();
