@@ -144,7 +144,13 @@ canvas.addEventListener('click', event => {
       const pais = geojson.features.find(f => d3.geoContains(f, [lng, lat]));
       if (pais) {
         const nombrePais = pais.properties.name || 'País';
-        const urlNoticias = pais.properties.news_url;
+let urlNoticias = null;
+if (Array.isArray(pais.properties.news_urls)) {
+  const links = pais.properties.news_urls;
+  urlNoticias = links[Math.floor(Math.random() * links.length)]; // 🔀 Escoge uno aleatorio
+} else {
+  urlNoticias = pais.properties.news_url; // Para compatibilidad con los países que solo tienen uno
+}
 
         if (urlNoticias) {
           const esImagen = urlNoticias.match(/\.(jpg|jpeg|png|webp|gif)$/i);
@@ -301,38 +307,39 @@ function getCookie(nombre) {
 
   // Activar audio tras interacción del usuario
   ["click", "mousemove", "keydown"].forEach(evento => {
-    document.addEventListener(evento, activarAudio);
-  });
+  document.addEventListener(evento, activarAudio);
+});
 
-  function activarAudio() {
-    if (audio && audio.paused) {
-      audio.volume = 0.1;
-      audio.loop = true;
-      audio.play().catch(err => {
-        console.warn("⚠️ El navegador bloqueó el audio:", err);
-      });
-    }
-
-    // Solo una vez
-    ["click", "mousemove", "keydown"].forEach(evento => {
-      document.removeEventListener(evento, activarAudio);
+function activarAudio() {
+  if (audio && audio.paused) {
+    audio.volume = 0.3; // 🔈 Volumen inicial: 30%
+    audio.loop = true;
+    audio.play().catch(err => {
+      console.warn("⚠️ El navegador bloqueó el audio:", err);
     });
   }
 
-  // Revisión de expiración + volumen creciente
-  const intervalo = setInterval(() => {
-    const ahora = Date.now();
-    const restante = tiempoFinal - ahora;
+  // Solo una vez
+  ["click", "mousemove", "keydown"].forEach(evento => {
+    document.removeEventListener(evento, activarAudio);
+  });
+}
 
-    if (restante <= 0) {
-      clearInterval(intervalo);
-      window.location.href = "final.html"; // Redirige sin bloquear
-      return;
-    }
+// Revisión de expiración + volumen creciente
+const intervalo = setInterval(() => {
+  const ahora = Date.now();
+  const restante = tiempoFinal - ahora;
 
-    const progreso = (ahora - tiempoInicio) / (tiempoFinal - tiempoInicio);
-    if (audio) {
-      audio.volume = Math.min(0.1 + progreso * 0.9, 1);
-    }
-  }, 1000);
+  if (restante <= 0) {
+    clearInterval(intervalo);
+    window.location.href = "final.html";
+    return;
+  }
+
+  const progreso = (ahora - tiempoInicio) / (tiempoFinal - tiempoInicio);
+  if (audio) {
+    // 🔊 Volumen de 0.3 a 1.0
+    audio.volume = Math.min(0.3 + progreso * 0.7, 1);
+  }
+}, 1000);
 })();

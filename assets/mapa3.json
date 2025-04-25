@@ -173,7 +173,11 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "USA.geojson",
-        "news_url": "assets/img/meme.jpg",
+        "news_urls": [
+          "https://youtu.be/CwZW0CO7F-g?si=S_gUgN5eiC0IlJM2",
+          "https://web.archive.org/web/20060410200249/http://www.cs.wisc.edu/~plonka/netgear-sntp/",
+          "https://www.reddit.com/r/sysadmin/comments/1eb4nsk/windows_date_time_unspecified_time_server/"
+        ],
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -2181,9 +2185,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CAN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CAN.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -5658,9 +5660,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CRI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CRI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -5985,9 +5985,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NIC.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NIC.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -6376,9 +6374,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "HTI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "HTI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -6643,9 +6639,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "DOM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "DOM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -6930,9 +6924,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SLV.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SLV.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -7193,9 +7185,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GTM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GTM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -7516,9 +7506,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CUB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CUB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -7867,9 +7855,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "HND.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "HND.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -8278,9 +8264,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "USA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "USA.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -10287,9 +10271,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CAN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CAN.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -13765,7 +13747,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MEX.geojson",
-        "news_url": "https://www.elfinanciero.com.mx/tech/2023/04/03/como-cambiar-mi-celular-a-la-hora-exacta-horario-de-verano-mexico-3-de-abril-2023/",
+        "news_url": "https://www.reddit.com/r/WindowsHelp/comments/15c9kyy/weird_clock_issue_not_syncing_to_time_server/",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -14627,9 +14609,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BLZ.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BLZ.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -14890,9 +14870,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PAN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PAN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -15281,9 +15259,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GRL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GRL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -15992,9 +15968,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BHS.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BHS.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -16269,9 +16243,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TTO.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TTO.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -16484,9 +16456,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PRI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PRI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -16703,9 +16673,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "JAM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "JAM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -16930,9 +16898,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "IDN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "IDN.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -18163,9 +18129,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MYS.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MYS.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -18600,9 +18564,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CYP.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CYP.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -18843,9 +18805,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "IND.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "IND.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -19571,7 +19531,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CHN.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://www.nasa.gov/404",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -20719,9 +20679,7 @@
         "fclass_se": null,
         "fclass_bd": "Unrecognized",
         "fclass_ua": null,
-        "filename": "ISR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ISR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -21006,9 +20964,7 @@
         "fclass_se": null,
         "fclass_bd": "Admin-0 country",
         "fclass_ua": null,
-        "filename": "PSE.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PSE.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -21225,9 +21181,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LBN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LBN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -21452,9 +21406,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SYR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SYR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -21744,7 +21696,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "KOR.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://www.nasa.gov/404",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -22002,9 +21954,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PRK.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PRK.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -22383,9 +22333,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BTN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BTN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -22618,9 +22566,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "OMN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "OMN.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -22995,9 +22941,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "UZB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "UZB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -23394,9 +23338,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "KAZ.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "KAZ.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -24025,9 +23967,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TJK.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TJK.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -24372,9 +24312,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MNG.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MNG.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -24855,9 +24793,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "VNM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "VNM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -25214,9 +25150,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "KHM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "KHM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -25465,9 +25399,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ARE.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ARE.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -25736,9 +25668,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GEO.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GEO.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -26015,9 +25945,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "AZE.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "AZE.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -26380,9 +26308,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TUR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TUR.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -26841,9 +26767,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LAO.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LAO.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -27172,9 +27096,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "KGZ.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "KGZ.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -27495,9 +27417,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ARM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ARM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -27758,9 +27678,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "IRQ.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "IRQ.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -28061,9 +27979,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "IRN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "IRN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -28548,9 +28464,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "QAT.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "QAT.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -28767,9 +28681,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SAU.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SAU.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -29254,9 +29166,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PAK.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PAK.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -29701,9 +29611,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "THA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "THA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -30140,9 +30048,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "KWT.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "KWT.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -30359,9 +30265,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TLS.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TLS.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -30586,9 +30490,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BRN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BRN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -30801,9 +30703,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MMR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MMR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -31264,9 +31164,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BGD.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BGD.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -31591,9 +31489,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "AFG.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "AFG.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -32050,9 +31946,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TKM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TKM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -32449,9 +32343,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "JOR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "JOR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -32708,9 +32600,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NPL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NPL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -32983,9 +32873,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "YEM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "YEM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -33342,9 +33230,7 @@
         "fclass_se": "Unrecognized",
         "fclass_bd": "Unrecognized",
         "fclass_ua": "Unrecognized",
-        "filename": "CYN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CYN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -33589,9 +33475,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PHL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PHL.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -34238,9 +34122,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LKA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LKA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -34461,9 +34343,7 @@
         "fclass_se": null,
         "fclass_bd": "Admin-1 states provinces",
         "fclass_ua": null,
-        "filename": "TWN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TWN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -34681,7 +34561,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "JPN.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://www.nict.go.jp/en/sts/ntp_faq.html",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -35134,7 +35014,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CHL.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://www.nasa.gov/404",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -35778,9 +35658,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BOL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BOL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -36201,9 +36079,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PER.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PER.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -36688,9 +36564,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ARG.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ARG.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -37361,9 +37235,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SUR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SUR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -37648,9 +37520,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GUY.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GUY.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -37992,7 +37862,9 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "BRA.geojson",
-        "news_url": "https://youtu.be/xllVjoYK14k?si=gh4AUPgzAy2lss7n",
+        "news_urls": [
+      "https://youtu.be/xllVjoYK14k?si=gh4AUPgzAy2lss7n"
+     ] ,
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -38986,9 +38858,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "URY.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "URY.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -39253,9 +39123,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ECU.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ECU.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -39568,9 +39436,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "COL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "COL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -40151,9 +40017,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PRY.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PRY.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -40466,9 +40330,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "VEN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "VEN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -41017,9 +40879,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "FLK.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "FLK.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -41240,9 +41100,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ETH.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ETH.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -41659,9 +41517,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SSD.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SSD.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -42094,9 +41950,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SOM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SOM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -42425,9 +42279,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "KEN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "KEN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -42756,9 +42608,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MWI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MWI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -43051,9 +42901,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TZA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TZA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -43442,9 +43290,7 @@
         "fclass_se": "Unrecognized",
         "fclass_bd": "Unrecognized",
         "fclass_ua": "Unrecognized",
-        "filename": "SOL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SOL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -43729,9 +43575,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MAR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MAR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -44164,9 +44008,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ESH.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ESH.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -44459,9 +44301,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "COG.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "COG.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -44838,9 +44678,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "COD.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "COD.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -45517,9 +45355,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NAM.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NAM.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -46437,9 +46273,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LBY.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LBY.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -46844,9 +46678,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TUN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TUN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -47151,9 +46983,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ZMB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ZMB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -47578,9 +47408,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SLE.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SLE.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -47849,9 +47677,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GIN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GIN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -48312,9 +48138,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LBR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LBR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -48603,9 +48427,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CAF.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CAF.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -49034,9 +48856,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SDN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SDN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -49541,9 +49361,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "DJI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "DJI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -49784,9 +49602,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ERI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ERI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -50079,9 +49895,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CIV.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CIV.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -50446,9 +50260,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MLI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MLI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -50933,9 +50745,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SEN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SEN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -51292,9 +51102,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NGA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NGA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -51707,9 +51515,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BEN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BEN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -51990,9 +51796,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "AGO.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "AGO.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -52479,9 +52283,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BWA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BWA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -52822,9 +52624,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ZWE.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ZWE.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -53153,9 +52953,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TCD.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TCD.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -53568,9 +53366,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "DZA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "DZA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -53999,9 +53795,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MOZ.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MOZ.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -54498,9 +54292,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SWZ.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SWZ.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -54725,9 +54517,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BDI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BDI.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -54960,9 +54750,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "RWA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "RWA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -55199,9 +54987,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "UGA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "UGA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -55494,9 +55280,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LSO.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LSO.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -55725,9 +55509,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CMR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "CMR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -56152,9 +55934,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GAB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GAB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -56459,9 +56239,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NER.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NER.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -56874,9 +56652,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BFA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BFA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -57213,9 +56989,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "TGO.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "TGO.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -57472,9 +57246,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GHA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GHA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -57755,9 +57527,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GNB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GNB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -58014,9 +57784,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "EGY.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "EGY.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -58373,9 +58141,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MRT.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MRT.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -58712,9 +58478,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GNQ.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GNQ.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -58923,9 +58687,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GMB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GMB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -59170,9 +58932,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MDG.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MDG.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -59549,9 +59309,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "FRA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "FRA.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -60038,9 +59796,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "UKR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "UKR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -60593,9 +60349,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BLR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BLR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -60956,9 +60710,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LTU.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LTU.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -61216,7 +60968,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "RUS.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://habr.com/ru/companies/yandex/articles/861538/",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -63953,7 +63705,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CZE.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://support.budgetbakers.com/hc/es/articles/13383533482130-Tiempos-de-Transacci%C3%B3n-Incorrectos ",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -64276,7 +64028,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "DEU.geojson",
-        "news_url": "assets/imagenes/alemania.jpg",
+        "news_url": "https://www.nasa.gov/404",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -64690,9 +64442,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "EST.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "EST.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -64949,9 +64699,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LVA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LVA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -65220,9 +64968,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NOR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NOR.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -65769,9 +65515,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SWE.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SWE.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -66112,9 +65856,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "FIN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "FIN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -66455,9 +66197,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "LUX.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "LUX.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -66666,9 +66406,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BEL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BEL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -66917,9 +66655,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MKD.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MKD.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -67172,9 +66908,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ALB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ALB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -67451,9 +67185,7 @@
         "fclass_se": "Admin-0 country",
         "fclass_bd": "Admin-0 country",
         "fclass_ua": "Unrecognized",
-        "filename": "kosovo.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "kosovo.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -67718,9 +67450,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ESP.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ESP.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -68106,7 +67836,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "DNK.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://www.theregister.com/2006/05/11/d-link_time_dispute_settlement/",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -68390,9 +68120,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ROU.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ROU.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -68749,9 +68477,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "HUN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "HUN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -69060,9 +68786,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SVK.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SVK.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -69375,9 +69099,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "POL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "POL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -69738,9 +69460,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "IRL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "IRL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -69974,7 +69694,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "GBR.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://www.reddit.com/r/WindowsHelp/comments/15c9kyy/weird_clock_issue_not_syncing_to_time_server/",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -70386,9 +70106,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "GRC.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "GRC.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -70791,9 +70509,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "AUT.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "AUT.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -71122,9 +70838,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ITA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ITA.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -71663,9 +71377,13 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CHE.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "filename": "CHE.geojson",        
+        "news_urls": [
+          "https://www.mobatime.com/es/art%C3%ADculo/precisi%C3%B3n-del-tiempo-en-la-aviaci%C3%B3n/#universal-importance",
+          "https://www.mobatime.com/es/art%C3%ADculo/sincronizaci%C3%B3n-horaria-en-la-industria-energ%C3%A9tica/"
+        ],
         "icon": "assets/img/icono.png"
+        
       },
       "geometry": {
         "type": "Polygon",
@@ -71942,9 +71660,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NLD.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NLD.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -72185,9 +71901,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SRB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SRB.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -72560,9 +72274,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "HRV.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "HRV.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -72915,9 +72627,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SVN.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SVN.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -73170,9 +72880,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BGR.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BGR.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -73465,9 +73173,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MNE.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MNE.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -73720,9 +73426,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "BIH.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "BIH.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -73995,9 +73699,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PRT.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PRT.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -74310,9 +74012,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "MDA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "MDA.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -74601,9 +74301,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ISL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ISL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -74864,9 +74562,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "PNG.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "PNG.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -75386,7 +75082,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "AUS.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://archive.ph/20130204005630/http://www.taborcommunications.com/hpcwire/hpcwireWWW/03/0711/105537.html",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -76538,9 +76234,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "FJI.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "FJI.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -76819,9 +76513,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NZL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NZL.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -77272,9 +76964,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "NCL.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "NCL.geojson"
       },
       "geometry": {
         "type": "Polygon",
@@ -77507,9 +77197,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "SLB.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "SLB.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -77856,9 +77544,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "VUT.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "VUT.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -78093,9 +77779,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ATA.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ATA.geojson"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -80950,9 +80634,7 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "ATF.geojson",
-        "news_url": "https://news.example.com/unknown",
-        "icon": "assets/img/icono.png"
+        "filename": "ATF.geojson"
       },
       "geometry": {
         "type": "Polygon",
