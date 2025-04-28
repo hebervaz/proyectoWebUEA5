@@ -177,7 +177,7 @@
           "https://youtu.be/CwZW0CO7F-g?si=S_gUgN5eiC0IlJM2",
           "https://web.archive.org/web/20060410200249/http://www.cs.wisc.edu/~plonka/netgear-sntp/",
           "https://www.reddit.com/r/sysadmin/comments/1eb4nsk/windows_date_time_unspecified_time_server/"
-        ],
+        ],        
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -13747,7 +13747,10 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "MEX.geojson",
-        "news_url": "https://www.reddit.com/r/WindowsHelp/comments/15c9kyy/weird_clock_issue_not_syncing_to_time_server/",
+"news_urls": [
+          "https://www.elfinanciero.com.mx/tech/2023/04/03/como-cambiar-mi-celular-a-la-hora-exacta-horario-de-verano-mexico-3-de-abril-2023/",
+          "https://www.muyseguridad.net/2017/04/04/ntp-de-windows-horas-equivocadas/" 
+        ],        
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -19531,7 +19534,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CHN.geojson",
-        "news_url": "https://www.nasa.gov/404",
+        "news_url": "https://time.is/es/China",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -21696,7 +21699,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "KOR.geojson",
-        "news_url": "https://www.nasa.gov/404",
+        "news_url": "https://time.is/es/South_Korea",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -35014,7 +35017,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CHL.geojson",
-        "news_url": "https://www.nasa.gov/404",
+        "news_url": "https://time.is/es/Chile",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -45713,7 +45716,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "ZAF.geojson",
-        "news_url": "https://news.example.com/unknown",
+        "news_url": "https://www.reddit.com/r/techsupport/comments/15adgei/windows_time_sync_failed/",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -59309,7 +59312,12 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "FRA.geojson"
+        "filename": "FRA.geojson",
+        "news_urls": [
+          "https://www.larepublica.co/globoeconomia/hospitales-en-nueva-york-londres-y-paris-sufren-cortes-tecnicos-por-fallo-tecnologico-3911292",
+          "https://sl.bing.net/faYJdfm0c6S" 
+        ],        
+        "icon": "assets/img/icono.png"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -63705,7 +63713,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "CZE.geojson",
-        "news_url": "https://support.budgetbakers.com/hc/es/articles/13383533482130-Tiempos-de-Transacci%C3%B3n-Incorrectos ",
+        "news_url": "https://support.budgetbakers.com/hc/es/articles/13383533482130-Tiempos-de-Transacci%C3%B3n-Incorrectos",
         "icon": "assets/img/icono.png"
       },
       "geometry": {
@@ -64028,7 +64036,7 @@
         "fclass_bd": null,
         "fclass_ua": null,
         "filename": "DEU.geojson",
-        "news_url": "https://www.nasa.gov/404",
+        "news_url": "https://sl.bing.net/blFe1Hhl3uu",
         "icon": "assets/img/icono.png"
       },
       "geometry": {

@@ -3,7 +3,8 @@ const audio = document.getElementById("alarma-audio");
 
 function intentarIniciarAudio() {
     if (!audioIniciado && audio) {
-        audio.volume = 0.1;
+        audio.volume = 0.5; // Ajusta el volumen del audio
+        audio.loop = true; // Repite el audio
         audio.play().then(() => {
             audioIniciado = true;
             console.log("🔊 Audio iniciado con éxito");
