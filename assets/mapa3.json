@@ -2185,7 +2185,9 @@
         "fclass_se": null,
         "fclass_bd": null,
         "fclass_ua": null,
-        "filename": "CAN.geojson"
+        "filename": "CAN.geojson",
+        "news_url": "https://www.thecanadianencyclopedia.ca/en/article/guide-to-y2k#:~:text=With%2011%2C000%20people%20involved%20in,came%20to%20about%20%24500%20million.",
+        "icon": "assets/img/icono.png"
       },
       "geometry": {
         "type": "MultiPolygon",
